@@ -1,6 +1,32 @@
 {
+  "name": "omise-api-test",
+  "version": "1.0.0",
+  "description": "OMISE TEST",
+  "main": "src/app.js",
+  "scripts": {
+    "build": "./node_modules/.bin/babel src -d dist",
+    "dev": "nodemon --inspect --exec ./node_modules/.bin/babel-node ./src/app.js",
+    "start": "npm run build && cp .env ./dist && cd dist && node app.js"
+  },
+  "author": "",
+  "license": "MIT",
   "dependencies": {
+    "@cloudnative/health-connect": "^2.1.0",
+    "cors": "^2.8.5",
+    "cuid": "^2.1.6",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "omise": "^0.6.0"
+    "express-fileupload": "^1.1.6",
+    "jsonwebtoken": "^8.5.1",
+    "log4js": "^6.1.0",
+    "node-cron": "^2.0.3",
+    "omise": "^0.6.0",
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/node": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "nodemon": "^2.0.1"
   }
 }
